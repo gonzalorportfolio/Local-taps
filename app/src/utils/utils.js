@@ -19,17 +19,6 @@ export const getUserLocation = async () => {
 
 export const loadMain = () => {
     getEl('#app').innerHTML =`
-    <main class="wrapper">
-      <h2>LOCAL TAPAS</h2>
-      <p>Make a list of Tapas restaurant you would like to eat</p>
-      <p>Once you are done check it off!</p>
-      <ul class="plates">
-        <li>Loading Tapas...</li>
-      </ul>
-      <form id="add-items">
-        <input type="text" name="item" placeholder="Item Name" required>
-        <input type="submit" value="+ Add Item">
-      </form>
-    </main>
+    
     `
 }
