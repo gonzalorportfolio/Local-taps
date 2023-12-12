@@ -1,6 +1,6 @@
 import './style.css'
-import { getEl, getUserLocation } from './modules/utils.js';
-import { getList, setList, addNewItem } from './modules/localstorage-mods.js';
+import { getEl, getUserLocation, loadMain } from './utils/utils.js';
+import { getList, setList, addNewItem } from './utils/local-storage.js';
 
 const { latitude, longitude } = getUserLocation();
 const items = getList('items') || [];
@@ -50,7 +50,7 @@ const toggleDone = (e) => {
 
 
 const main = () => {
-
+  loadMain();
   populateList(items, getEl('.plates'));
   getEl('#add-items').addEventListener('submit', addItem);
   getEl('.plates').addEventListener('click', toggleDone);
