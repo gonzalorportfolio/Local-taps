@@ -17,8 +17,3 @@ export const getUserLocation = async () => {
   }
 };
 
-export const loadMain = () => {
-    getEl('#app').innerHTML =`
-    
-    `
-}

@@ -1,5 +1,5 @@
 import './style.css'
-import { getEl, getUserLocation, loadMain } from './utils/utils.js';
+import { getEl, getUserLocation } from './utils/utils.js';
 import { getList, setList, addNewItem } from './utils/local-storage.js';
 
 const { latitude, longitude } = getUserLocation();
@@ -50,7 +50,6 @@ const toggleDone = (e) => {
 
 
 const main = () => {
-  loadMain();
   populateList(items, getEl('.plates'));
   getEl('#add-items').addEventListener('submit', addItem);
   getEl('.plates').addEventListener('click', toggleDone);
